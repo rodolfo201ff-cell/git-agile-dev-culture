@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clínica Estética Lídia Siqueira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>✨ Clínica Estética Bella</h1>
+    <h2>Agende seu horário</h2>
+    
+    <form id="formAgendamento">
+        <input type="text" id="nome" placeholder="Seu Nome" required>
+        <input type="tel" id="telefone" placeholder="Seu WhatsApp" required>
+        <select id="servico">
+            <option>Limpeza de Pele</option>
+            <option>Depilação</option>
+            <option>Massagem</option>
+        </select>
+        <input type="date" id="data">
+        <button type="submit">Agendar</button>
+    </form>
+
+    <h3>Agendamentos:</h3>
+    <ul id="listaAgendamentos"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

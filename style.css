@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+body { 
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 50%, #ffd4e5 100%); 
+    padding: 20px; 
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container { 
+    max-width: 650px; 
+    width: 100%;
+    background: #ffffff; 
+    padding: 40px; 
+    border-radius: 30px; 
+    box-shadow: 0 20px 60px rgba(255, 105, 180, 0.2);
+    border: 1px solid rgba(255, 192, 203, 0.5);
+    backdrop-filter: blur(10px);
+}
+.logo {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto 25px auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.contato-topo { text-align: center; margin-bottom: 30px; }
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+}
+.btn-whatsapp:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+h2 { 
+    font-family: 'Playfair Display', serif;
+    color: #d4af37; 
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+h3 { 
+    color: #c71585; 
+    border-bottom: 3px solid #ffc0cb;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+input, select { 
+    margin: 12px 0; 
+    padding: 16px; 
+    width: 100%; 
+    border-radius: 15px; 
+    border: 2px solid #ffe4e1;
+    font-size: 16px;
+    background: #fffafc;
+    transition: 0.3s;
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    background: white;
+}
+
+.linha-data-hora { display: flex; gap: 15px; }
+.linha-data-hora input { width: 50%; }
+
+button { 
+    background: linear-gradient(135deg, #ff69b4, #d4af37); 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 18px;
+    width: 100%;
+    border-radius: 15px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+}
+button:hover { 
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+}
+ul { list-style: none; padding: 0; }
+li { 
+    background: linear-gradient(90deg, #fff0f5, #ffe4e1); 
+    margin: 15px 0; 
+    padding: 20px; 
+    border-radius: 15px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid #ff69b4;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.btn-excluir {
+    background: linear-gradient(135deg, #ff4d4d, #c0392b);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #c71585;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* PRA CELULAR */
+@media (max-width: 600px) {
+    .container { padding: 25px; }
+    .linha-data-hora { flex-direction: column; }
+    .linha-data-hora input { width: 100%; }
+    li { flex-direction: column; gap: 15px; }
+    .btn-excluir { width: 100%; }
+}

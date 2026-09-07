@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Lídia Siqueira - Estética e Beleza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Studio Lídia Siqueira" class="logo">
+        
+        <div class="contato-topo">
+            <a href="https://wa.me/5591981800016" target="_blank" class="btn-whatsapp">
+                📱 Fale no WhatsApp (91) 98180-0016
+            </a>
+        </div>
+
+        <h2>Agende seu horário</h2>
+
+        <form id="formAgendamento">
+            <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+            <select id="servico">
+                <option>✨ Limpeza de Pele - R$ 120</option>
+                <option>💉 Botox - R$ 350</option>
+                <option>🔥 Depilação a Laser - R$ 200</option>
+                <option>💆 Massagem Relaxante - R$ 90</option>
+            </select>
+            <div class="linha-data-hora">
+                <input type="date" id="data" required>
+                <input type="time" id="hora" required>
+            </div>
+            <button type="submit">✨ Agendar Agora</button>
+        </form>
+
+        <h3>Meus Agendamentos</h3>
+        <ul id="listaAgendamentos"></ul>
+
+        <footer>
+            <p>Studio Lídia Siqueira - Beleza que transforma 💅</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

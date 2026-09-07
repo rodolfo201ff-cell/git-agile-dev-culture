@@ -19,3 +19,7 @@ git clone https://github.com/rodolfo201ff-cell/git-agile-dev-culture.git
 ## Autor
 Rodolfo F. Farias - 2026.2
 Mediador: William Andrey
+## Loja Online
+### Contato 
+Duvidas: Github: github.com/rodolfo201ff-cell
+Atendimento Seg a Sex 08h às 18h

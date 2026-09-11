@@ -1,16 +1,20 @@
-function buscar(){
- let t=document.getElementById('busca').value.toLowerCase();
- document.querySelectorAll('.item').forEach(el=>{
-   el.style.display = el.dataset.nome.includes(t) ? 'flex' : 'none';
- });
+function filtrarServicos(){
+ let busca = document.getElementById('buscaServico').value.toLowerCase();
+ let options = document.getElementById('servico').options;
+ for(let i=0;i<options.length;i++){
+   let txt = options[i].text.toLowerCase();
+   if(options[i].value === ""){ options[i].style.display=""; continue; }
+   options[i].style.display = txt.includes(busca)? "" : "none";
+ }
 }
-document.addEventListener('DOMContentLoaded', carregar);
+document.addEventListener('DOMContentLoaded', mostrar);
 document.getElementById('formAgendamento').addEventListener('submit', function(e){
  e.preventDefault();
  const nome=document.getElementById('nome').value;
  const serv=document.getElementById('servico').value;
  const data=document.getElementById('data').value;
  const hora=document.getElementById('hora').value;
+ if(!serv){alert('Escolha um serviço!');return;}
  let ags=JSON.parse(localStorage.getItem('ags')||'[]');
  if(ags.find(a=>a.data===data && a.hora===hora)){alert('Horário ocupado!');return;}
  ags.push({nome,serv,data,hora});
@@ -27,4 +31,3 @@ function mostrar(){
  });
 }
 function del(i){let ags=JSON.parse(localStorage.getItem('ags')||'[]');ags.splice(i,1);localStorage.setItem('ags',JSON.stringify(ags));mostrar();}
-function carregar(){mostrar();}

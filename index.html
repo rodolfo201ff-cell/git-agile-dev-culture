@@ -15,54 +15,18 @@
 <h2>Agende seu horário</h2>
 <form id="formAgendamento">
 <input id="nome" placeholder="Seu nome completo" required>
-<label>🔍 Digite pra filtrar o serviço:</label>
-<input type="text" id="buscaServico" placeholder="Ex: botox, limpeza..." onkeyup="filtrarServicos()">
+<input type="text" id="buscaServico" placeholder="🔍 Buscar: botox, limpeza, laser..." onkeyup="filtrarServicos()">
 <select id="servico" required>
 <option value="">-- Escolha o serviço --</option>
-<optgroup label="FACIAIS">
-<option>Limpeza de pele profunda - R$ 120 a R$ 250</option>
-<option>Peeling químico - R$ 150 a R$ 350</option>
-<option>Microagulhamento - R$ 250 a R$ 600</option>
-<option>Revitalização - R$ 100 a R$ 200</option>
-<option>Drenagem facial - R$ 80 a R$ 150</option>
-<option>Design sobrancelhas - R$ 35 a R$ 70</option>
-<option>Design com henna - R$ 50 a R$ 90</option>
-<option>Micropigmentação - R$ 400 a R$ 1.200</option>
-<option>Extensão de cílios - R$ 120 a R$ 250</option>
-<option>Lash Lifting - R$ 90 a R$ 180</option>
-<option>Hydra Gloss - R$ 150 a R$ 300</option>
-<option>Radiofrequência - R$ 120 a R$ 250</option>
-</optgroup>
-<optgroup label="CORPORAIS">
-<option>Drenagem corporal - R$ 80 a R$ 160</option>
-<option>Massagem modeladora - R$ 90 a R$ 170</option>
-<option>Massagem relaxante - R$ 90 a R$ 180</option>
-<option>Pedras quentes - R$ 120 a R$ 220</option>
-<option>Criolipólise - R$ 150 a R$ 400</option>
-<option>Cavitação - R$ 100 a R$ 200</option>
-<option>Carboxiterapia - R$ 100 a R$ 180</option>
-<option>Corrente Russa - R$ 70 a R$ 130</option>
-<option>Endermologia - R$ 80 a R$ 150</option>
-<option>Banho de lua - R$ 90 a R$ 180</option>
-<option>Pump Up - R$ 80 a R$ 150</option>
-<option>Micro estrias - R$ 250 a R$ 500</option>
-</optgroup>
-<optgroup label="DEPILAÇÃO">
-<option>Virilha completa - R$ 50 a R$ 100</option>
-<option>Meia perna - R$ 30 a R$ 60</option>
-<option>Axilas cera - R$ 20 a R$ 45</option>
-<option>Laser Axilas - R$ 60 a R$ 150</option>
-<option>Laser Perna Inteira - R$ 200 a R$ 500</option>
-<option>Spa dos pés - R$ 50 a R$ 100</option>
-<option>💉 Botox - R$ 1.200</option>
-<option>💋 Bigode Chinês - R$ 1.800</option>
-</optgroup>
+<optgroup label="FACIAIS"><option>Limpeza de pele profunda - R$ 120 a R$ 250</option><option>Peeling químico - R$ 150 a R$ 350</option><option>Microagulhamento - R$ 250 a R$ 600</option><option>Revitalização - R$ 100 a R$ 200</option><option>Drenagem facial - R$ 80 a R$ 150</option><option>Design sobrancelhas - R$ 35 a R$ 70</option><option>Henna - R$ 50 a R$ 90</option><option>Micropigmentação - R$ 400 a R$ 1.200</option><option>Extensão de cílios - R$ 120 a R$ 250</option><option>Lash Lifting - R$ 90 a R$ 180</option><option>Hydra Gloss - R$ 150 a R$ 300</option><option>Radiofrequência - R$ 120 a R$ 250</option></optgroup>
+<optgroup label="CORPORAIS"><option>Drenagem corporal - R$ 80 a R$ 160</option><option>Modeladora - R$ 90 a R$ 170</option><option>Relaxante - R$ 90 a R$ 180</option><option>Pedras quentes - R$ 120 a R$ 220</option><option>Criolipólise - R$ 150 a R$ 400</option><option>Cavitação - R$ 100 a R$ 200</option><option>Carboxiterapia - R$ 100 a R$ 180</option><option>Corrente Russa - R$ 70 a R$ 130</option><option>Endermologia - R$ 80 a R$ 150</option><option>Banho de lua - R$ 90 a R$ 180</option><option>Pump Up - R$ 80 a R$ 150</option><option>Micro estrias - R$ 250 a R$ 500</option></optgroup>
+<optgroup label="DEPILAÇÃO"><option>Virilha - R$ 50 a R$ 100</option><option>Meia perna - R$ 30 a R$ 60</option><option>Axilas cera - R$ 20 a R$ 45</option><option>Laser Axilas - R$ 60 a R$ 150</option><option>Laser Perna Inteira - R$ 200 a R$ 500</option><option>Spa dos pés - R$ 50 a R$ 100</option><option>💉 Botox - R$ 1.200</option><option>💋 Bigode Chinês - R$ 1.800</option></optgroup>
 </select>
 <div class="row"><input type="date" id="data" required><input type="time" id="hora" required></div>
 <button type="submit">✨ Agendar Agora</button>
 </form>
 <ul id="listaAgendamentos"></ul>
 </div>
-<script src="script.js"></script>
+<script>function filtrarServicos(){let b=document.getElementById('buscaServico').value.toLowerCase();let o=document.getElementById('servico').options;for(let i=0;i<o.length;i++){let t=o[i].text.toLowerCase();o[i].style.display=o[i].value===""?"":t.includes(b)?"":"none"}}document.getElementById('formAgendamento').addEventListener('submit',function(e){e.preventDefault();let n=document.getElementById('nome').value,s=document.getElementById('servico').value,d=document.getElementById('data').value,h=document.getElementById('hora').value;if(!s){alert('Escolha um serviço!');return}window.open(`https://wa.me/5591981800016?text=Olá! Quero agendar ${s} em ${d} às ${h} - ${n}`,'_blank')})</script>
 </body>
 </html>

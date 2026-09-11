@@ -3,13 +3,15 @@
 Repositório da disciplina **Git, Agile & Dev Culture** - UniFECAF / Ser Educacional
 Autor: **Rodolfo F. Farias** - Graduando em Análise e Desenvolvimento de Sistemas
 
-> Técnico em Segurança do Trabalho / Graduação em Logística / MBA em Gestão Tecnológica, Big Data e IA
+>  Graduação em Logística / MBA em Gestão Tecnológica, Big Data e IA / Técnico em Segurança do Trabalho 
 
 ## Sobre o projeto
 Projeto de loja online desenvolvido para aplicar conceitos de Git, metodologias ágeis (Scrum/Kanban) e cultura DevOps.
 
 ## Tecnologias
-- HTML5, CSS3, JavaScript
+- HTML5
+-  CSS3
+-  JavaScript
 - Git / GitHub
 - Markdown
 
@@ -18,8 +20,5 @@ git clone https://github.com/rodolfo201ff-cell/git-agile-dev-culture.git
 
 ## Autor
 Rodolfo F. Farias - 2026.2
-Mediador: William Andrey
-## Loja Online
-### Contato 
-Duvidas: Github: github.com/rodolfo201ff-cell
-Atendimento Seg a Sex 08h às 18h
+Graduando em ADS / MBA em Big Data, Analytics e IA
+

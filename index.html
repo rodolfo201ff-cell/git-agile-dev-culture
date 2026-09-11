@@ -2,41 +2,82 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Lidia</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Studio Lídia Siqueira - Tabela Completa</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
 <img src="logo.png" class="logo">
-<h1>Studio Lidia Siqueira</h1>
-<p class="sub">Beleza que transforma</p>
-<a class="btn-whats" href="https://wa.me/5591981800016" target="_blank">Agendar no WhatsApp</a>
-<h2>Tabela de Valores</h2>
-<div class="tabela">
-<div class="item"><span>Limpeza de Pele</span><b>R$ 60</b></div>
-<div class="item"><span>Drenagem Corporal</span><b>R$ 130</b></div>
-<div class="item"><span>Peeling Quimico</span><b>R$ 350</b></div>
-<div class="item"><span>Laser por area</span><b>R$ 140</b></div>
-<div class="item destaque"><span>Botox 1 area</span><b>R$ 1.200</b></div>
-<div class="item destaque"><span>Bigode Chines</span><b>R$ 1.800</b></div>
+<h1>Studio Lídia Siqueira</h1>
+<p class="sub">Beleza que transforma sua autoestima</p>
+<a class="btn-whats" href="https://wa.me/5591981800016" target="_blank">📱 Agendar no WhatsApp</a>
+
+<input type="text" id="busca" placeholder="🔍 Buscar procedimento... ex: botox, limpeza, laser" onkeyup="buscar()">
+
+<h2>💆 Procedimentos Faciais</h2>
+<div id="lista" class="tabela">
+<div class="item" data-nome="limpeza de pele profunda"><span>Limpeza de pele profunda</span><b>R$ 120 a R$ 250</b></div>
+<div class="item" data-nome="peeling quimico"><span>Peeling químico (por sessão)</span><b>R$ 150 a R$ 350</b></div>
+<div class="item" data-nome="microagulhamento dermaroller"><span>Microagulhamento (Dermaroller/Pen)</span><b>R$ 250 a R$ 600</b></div>
+<div class="item" data-nome="revitalizacao hidratacao facial"><span>Revitalização / Hidratação facial</span><b>R$ 100 a R$ 200</b></div>
+<div class="item" data-nome="drenagem linfatica facial"><span>Drenagem linfática facial</span><b>R$ 80 a R$ 150</b></div>
+<div class="item" data-nome="design sobrancelhas simples"><span>Design de sobrancelhas simples</span><b>R$ 35 a R$ 70</b></div>
+<div class="item" data-nome="design henna"><span>Design com henna</span><b>R$ 50 a R$ 90</b></div>
+<div class="item destaque" data-nome="micropigmentacao fio a fio shadow"><span>Micropigmentação fio a fio / Shadow</span><b>R$ 400 a R$ 1.200</b></div>
+<div class="item" data-nome="extensao cilios fio a fio volume russo"><span>Extensão de cílios (manutenção R$80 a R$150)</span><b>R$ 120 a R$ 250</b></div>
+<div class="item" data-nome="lash lifting"><span>Lash Lifting</span><b>R$ 90 a R$ 180</b></div>
+<div class="item" data-nome="hydra gloss lips"><span>Hydra Gloss Lips</span><b>R$ 150 a R$ 300</b></div>
+<div class="item" data-nome="radiofrequencia facial"><span>Radiofrequência facial</span><b>R$ 120 a R$ 250</b></div>
+
+<h2 style="margin-top:25px">🔥 Procedimentos Corporais</h2>
+<div class="item" data-nome="drenagem linfatica corporal"><span>Drenagem linfática corporal</span><b>R$ 80 a R$ 160</b></div>
+<div class="item" data-nome="massagem modeladora redutora"><span>Massagem modeladora / Redutora</span><b>R$ 90 a R$ 170</b></div>
+<div class="item" data-nome="massagem relaxante"><span>Massagem relaxante</span><b>R$ 90 a R$ 180</b></div>
+<div class="item" data-nome="pedras quentes"><span>Massagem com pedras quentes</span><b>R$ 120 a R$ 220</b></div>
+<div class="item destaque" data-nome="criolipolise"><span>Criolipólise (por área)</span><b>R$ 150 a R$ 400</b></div>
+<div class="item" data-nome="cavitacao ultrassom"><span>Cavitação / Ultrassom</span><b>R$ 100 a R$ 200</b></div>
+<div class="item" data-nome="carboxiterapia"><span>Carboxiterapia</span><b>R$ 100 a R$ 180</b></div>
+<div class="item" data-nome="corrente russa australiana"><span>Corrente Russa / Australiana</span><b>R$ 70 a R$ 130</b></div>
+<div class="item" data-nome="endermologia vacuoterapia"><span>Endermologia / Vacuoterapia</span><b>R$ 80 a R$ 150</b></div>
+<div class="item" data-nome="banho de lua"><span>Banho de lua</span><b>R$ 90 a R$ 180</b></div>
+<div class="item" data-nome="pump up gluteos"><span>Pump Up (Glúteos)</span><b>R$ 80 a R$ 150</b></div>
+<div class="item" data-nome="microagulhamento estrias"><span>Microagulhamento para estrias</span><b>R$ 250 a R$ 500</b></div>
+
+<h2 style="margin-top:25px">✨ Depilação e Outros</h2>
+<div class="item" data-nome="depilacao virilha completa"><span>Depilação virilha completa</span><b>R$ 50 a R$ 100</b></div>
+<div class="item" data-nome="meia perna"><span>Depilação meia perna</span><b>R$ 30 a R$ 60</b></div>
+<div class="item" data-nome="axilas cera"><span>Depilação axilas (cera)</span><b>R$ 20 a R$ 45</b></div>
+<div class="item" data-nome="laser axilas"><span>Laser / Luz Pulsada Axilas</span><b>R$ 60 a R$ 150</b></div>
+<div class="item destaque" data-nome="laser perna inteira"><span>Laser Perna Inteira</span><b>R$ 200 a R$ 500</b></div>
+<div class="item" data-nome="spa dos pes"><span>Spa dos pés</span><b>R$ 50 a R$ 100</b></div>
+<div class="item destaque" data-nome="botox"><span>💉 Botox 1 área</span><b>R$ 1.200</b></div>
+<div class="item destaque" data-nome="bigode chines"><span>💋 Bigode Chinês</span><b>R$ 1.800</b></div>
 </div>
-<h2>Agende seu horario</h2>
+
+<h2>Agende seu horário</h2>
 <form id="formAgendamento">
-<input id="nome" placeholder="Seu nome" required>
+<input id="nome" placeholder="Seu nome completo" required>
 <select id="servico" required>
-<option value="">-- Escolha --</option>
-<option>Limpeza R$ 60</option>
-<option>Drenagem R$ 130</option>
-<option>Botox R$ 1200</option>
-<option>Bigode Chines R$ 1800</option>
+<option value="">-- Escolha o serviço --</option>
+<option>Limpeza de pele profunda</option>
+<option>Peeling químico</option>
+<option>Microagulhamento</option>
+<option>Drenagem facial / corporal</option>
+<option>Micropigmentação</option>
+<option>Extensão de cílios</option>
+<option>Massagem modeladora / relaxante</option>
+<option>Criolipólise</option>
+<option>Depilação cera / laser</option>
+<option>Botox R$1.200</option>
+<option>Bigode Chinês R$1.800</option>
 </select>
 <div class="row"><input type="date" id="data" required><input type="time" id="hora" required></div>
-<button type="submit">Agendar Agora</button>
+<button type="submit">✨ Agendar Agora</button>
 </form>
-<h3>Agendamentos</h3>
+<h3>Meus Agendamentos</h3>
 <ul id="listaAgendamentos"></ul>
-<footer>Belem PA</footer>
+<footer>Studio Lídia Siqueira • Belém - PA 💅</footer>
 </div>
 <script src="script.js"></script>
 </body>

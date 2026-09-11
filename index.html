@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Studio Lídia Siqueira - Agendamento</title>
+<title>Studio Lídia Siqueira</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,62 +12,56 @@
 <h1>Studio Lídia Siqueira</h1>
 <p class="sub">Beleza que transforma sua autoestima</p>
 <a class="btn-whats" href="https://wa.me/5591981800016" target="_blank">📱 Agendar no WhatsApp</a>
-
 <h2>Agende seu horário</h2>
 <form id="formAgendamento">
 <input id="nome" placeholder="Seu nome completo" required>
-
-<label style="font-weight:bold;margin-top:10px;display:block">🔍 Digite pra filtrar o serviço:</label>
-<input type="text" id="buscaServico" placeholder="Ex: botox, limpeza, laser, drenagem..." onkeyup="filtrarServicos()">
-
-<select id="servico" required size="12" style="height:300px">
+<label>🔍 Digite pra filtrar o serviço:</label>
+<input type="text" id="buscaServico" placeholder="Ex: botox, limpeza..." onkeyup="filtrarServicos()">
+<select id="servico" required>
 <option value="">-- Escolha o serviço --</option>
-<optgroup label="💆 PROCEDIMENTOS FACIAIS">
-<option value="Limpeza de pele profunda - R$ 120 a R$ 250">Limpeza de pele profunda - R$ 120 a R$ 250</option>
-<option value="Peeling químico - R$ 150 a R$ 350">Peeling químico - R$ 150 a R$ 350</option>
-<option value="Microagulhamento - R$ 250 a R$ 600">Microagulhamento (Dermaroller/Pen) - R$ 250 a R$ 600</option>
-<option value="Revitalização / Hidratação facial - R$ 100 a R$ 200">Revitalização / Hidratação facial - R$ 100 a R$ 200</option>
-<option value="Drenagem linfática facial - R$ 80 a R$ 150">Drenagem linfática facial - R$ 80 a R$ 150</option>
-<option value="Design de sobrancelhas - R$ 35 a R$ 70">Design de sobrancelhas simples - R$ 35 a R$ 70</option>
-<option value="Design com henna - R$ 50 a R$ 90">Design com henna - R$ 50 a R$ 90</option>
-<option value="Micropigmentação - R$ 400 a R$ 1.200">Micropigmentação fio a fio / Shadow - R$ 400 a R$ 1.200</option>
-<option value="Extensão de cílios - R$ 120 a R$ 250">Extensão de cílios - R$ 120 a R$ 250 (manutenção R$80 a R$150)</option>
-<option value="Lash Lifting - R$ 90 a R$ 180">Lash Lifting - R$ 90 a R$ 180</option>
-<option value="Hydra Gloss Lips - R$ 150 a R$ 300">Hydra Gloss Lips - R$ 150 a R$ 300</option>
-<option value="Radiofrequência facial - R$ 120 a R$ 250">Radiofrequência facial - R$ 120 a R$ 250</option>
+<optgroup label="FACIAIS">
+<option>Limpeza de pele profunda - R$ 120 a R$ 250</option>
+<option>Peeling químico - R$ 150 a R$ 350</option>
+<option>Microagulhamento - R$ 250 a R$ 600</option>
+<option>Revitalização - R$ 100 a R$ 200</option>
+<option>Drenagem facial - R$ 80 a R$ 150</option>
+<option>Design sobrancelhas - R$ 35 a R$ 70</option>
+<option>Design com henna - R$ 50 a R$ 90</option>
+<option>Micropigmentação - R$ 400 a R$ 1.200</option>
+<option>Extensão de cílios - R$ 120 a R$ 250</option>
+<option>Lash Lifting - R$ 90 a R$ 180</option>
+<option>Hydra Gloss - R$ 150 a R$ 300</option>
+<option>Radiofrequência - R$ 120 a R$ 250</option>
 </optgroup>
-<optgroup label="🔥 PROCEDIMENTOS CORPORAIS">
-<option value="Drenagem linfática corporal - R$ 80 a R$ 160">Drenagem linfática corporal - R$ 80 a R$ 160</option>
-<option value="Massagem modeladora / Redutora - R$ 90 a R$ 170">Massagem modeladora / Redutora - R$ 90 a R$ 170</option>
-<option value="Massagem relaxante - R$ 90 a R$ 180">Massagem relaxante - R$ 90 a R$ 180</option>
-<option value="Massagem pedras quentes - R$ 120 a R$ 220">Massagem com pedras quentes - R$ 120 a R$ 220</option>
-<option value="Criolipólise - R$ 150 a R$ 400">Criolipólise (por área) - R$ 150 a R$ 400</option>
-<option value="Cavitação / Ultrassom - R$ 100 a R$ 200">Cavitação / Ultrassom - R$ 100 a R$ 200</option>
-<option value="Carboxiterapia - R$ 100 a R$ 180">Carboxiterapia - R$ 100 a R$ 180</option>
-<option value="Corrente Russa / Australiana - R$ 70 a R$ 130">Corrente Russa / Australiana - R$ 70 a R$ 130</option>
-<option value="Endermologia / Vacuoterapia - R$ 80 a R$ 150">Endermologia / Vacuoterapia - R$ 80 a R$ 150</option>
-<option value="Banho de lua - R$ 90 a R$ 180">Banho de lua - R$ 90 a R$ 180</option>
-<option value="Pump Up Glúteos - R$ 80 a R$ 150">Pump Up (Glúteos) - R$ 80 a R$ 150</option>
-<option value="Microagulhamento estrias - R$ 250 a R$ 500">Microagulhamento para estrias - R$ 250 a R$ 500</option>
+<optgroup label="CORPORAIS">
+<option>Drenagem corporal - R$ 80 a R$ 160</option>
+<option>Massagem modeladora - R$ 90 a R$ 170</option>
+<option>Massagem relaxante - R$ 90 a R$ 180</option>
+<option>Pedras quentes - R$ 120 a R$ 220</option>
+<option>Criolipólise - R$ 150 a R$ 400</option>
+<option>Cavitação - R$ 100 a R$ 200</option>
+<option>Carboxiterapia - R$ 100 a R$ 180</option>
+<option>Corrente Russa - R$ 70 a R$ 130</option>
+<option>Endermologia - R$ 80 a R$ 150</option>
+<option>Banho de lua - R$ 90 a R$ 180</option>
+<option>Pump Up - R$ 80 a R$ 150</option>
+<option>Micro estrias - R$ 250 a R$ 500</option>
 </optgroup>
-<optgroup label="✨ DEPILAÇÃO E OUTROS">
-<option value="Depilação virilha completa - R$ 50 a R$ 100">Depilação virilha completa - R$ 50 a R$ 100</option>
-<option value="Depilação meia perna - R$ 30 a R$ 60">Depilação meia perna - R$ 30 a R$ 60</option>
-<option value="Depilação axilas - R$ 20 a R$ 45">Depilação axilas (cera) - R$ 20 a R$ 45</option>
-<option value="Laser Axilas - R$ 60 a R$ 150">Laser / Luz Pulsada Axilas - R$ 60 a R$ 150</option>
-<option value="Laser Perna Inteira - R$ 200 a R$ 500">Laser Perna Inteira - R$ 200 a R$ 500</option>
-<option value="Spa dos pés - R$ 50 a R$ 100">Spa dos pés - R$ 50 a R$ 100</option>
-<option value="Botox 1 área - R$ 1.200">💉 Botox 1 área - R$ 1.200</option>
-<option value="Bigode Chinês - R$ 1.800">💋 Bigode Chinês - R$ 1.800</option>
+<optgroup label="DEPILAÇÃO">
+<option>Virilha completa - R$ 50 a R$ 100</option>
+<option>Meia perna - R$ 30 a R$ 60</option>
+<option>Axilas cera - R$ 20 a R$ 45</option>
+<option>Laser Axilas - R$ 60 a R$ 150</option>
+<option>Laser Perna Inteira - R$ 200 a R$ 500</option>
+<option>Spa dos pés - R$ 50 a R$ 100</option>
+<option>💉 Botox - R$ 1.200</option>
+<option>💋 Bigode Chinês - R$ 1.800</option>
 </optgroup>
 </select>
-
 <div class="row"><input type="date" id="data" required><input type="time" id="hora" required></div>
 <button type="submit">✨ Agendar Agora</button>
 </form>
-<h3>Meus Agendamentos</h3>
 <ul id="listaAgendamentos"></ul>
-<footer>Studio Lídia Siqueira • Belém - PA 💅</footer>
 </div>
 <script src="script.js"></script>
 </body>
